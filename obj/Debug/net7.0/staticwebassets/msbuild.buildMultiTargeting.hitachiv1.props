@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\hitachiv1.props" />
+</Project>
