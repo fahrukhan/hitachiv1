@@ -9,5 +9,6 @@ namespace hitachiv1.Dtos.UserDto
     {
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
+        public RoleClass Role { get; set; } = RoleClass.Common;
     }
 }

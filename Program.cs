@@ -2,6 +2,8 @@ global using hitachiv1.Models;
 global using hitachiv1.Dtos.EmployeeDto;
 global using hitachiv1.Dtos.UserDto;
 global using hitachiv1.Dtos.DepartmentDto;
+global using hitachiv1.Dtos.AssetDetailDto;
+global using hitachiv1.Services.AssetServices;
 global using AutoMapper;
 global using hitachiv1.Data;
 
@@ -36,6 +38,8 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+builder.Services.AddScoped<IAssetClassService, AssetClassService>();
+builder.Services.AddScoped<IAreaService, AreaService>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(opt => {
         opt.TokenValidationParameters = new TokenValidationParameters{
